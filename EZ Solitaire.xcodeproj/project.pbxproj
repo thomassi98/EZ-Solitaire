@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8E464E6424A10CA000AE8533 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E6324A10CA000AE8533 /* AppDelegate.swift */; };
+		8E464E6624A10CA000AE8533 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E6524A10CA000AE8533 /* SceneDelegate.swift */; };
+		8E464E6824A10CA000AE8533 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E6724A10CA000AE8533 /* ViewController.swift */; };
+		8E464E6B24A10CA000AE8533 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E464E6924A10CA000AE8533 /* Main.storyboard */; };
+		8E464E6D24A10CA000AE8533 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E464E6C24A10CA000AE8533 /* Assets.xcassets */; };
+		8E464E7024A10CA000AE8533 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E464E6E24A10CA000AE8533 /* LaunchScreen.storyboard */; };
+		8E464E7B24A10CA100AE8533 /* EZ_SolitaireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E7A24A10CA100AE8533 /* EZ_SolitaireTests.swift */; };
+		8E464E8624A10CA100AE8533 /* EZ_SolitaireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E8524A10CA100AE8533 /* EZ_SolitaireUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E464E7724A10CA100AE8533 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E464E5824A10CA000AE8533 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E464E5F24A10CA000AE8533;
+			remoteInfo = "EZ Solitaire";
+		};
+		8E464E8224A10CA100AE8533 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E464E5824A10CA000AE8533 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E464E5F24A10CA000AE8533;
+			remoteInfo = "EZ Solitaire";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8E464E6024A10CA000AE8533 /* EZ Solitaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EZ Solitaire.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E464E6324A10CA000AE8533 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E464E6524A10CA000AE8533 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8E464E6724A10CA000AE8533 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E464E6A24A10CA000AE8533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E464E6C24A10CA000AE8533 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E464E6F24A10CA000AE8533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E464E7124A10CA000AE8533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E464E7624A10CA000AE8533 /* EZ SolitaireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EZ SolitaireTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E464E7A24A10CA100AE8533 /* EZ_SolitaireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZ_SolitaireTests.swift; sourceTree = "<group>"; };
+		8E464E7C24A10CA100AE8533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E464E8124A10CA100AE8533 /* EZ SolitaireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EZ SolitaireUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E464E8524A10CA100AE8533 /* EZ_SolitaireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZ_SolitaireUITests.swift; sourceTree = "<group>"; };
+		8E464E8724A10CA100AE8533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E464E5D24A10CA000AE8533 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E464E7324A10CA000AE8533 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E464E7E24A10CA100AE8533 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8E464E5724A10CA000AE8533 = {
+			isa = PBXGroup;
+			children = (
+				8E464E6224A10CA000AE8533 /* EZ Solitaire */,
+				8E464E7924A10CA100AE8533 /* EZ SolitaireTests */,
+				8E464E8424A10CA100AE8533 /* EZ SolitaireUITests */,
+				8E464E6124A10CA000AE8533 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8E464E6124A10CA000AE8533 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E464E6024A10CA000AE8533 /* EZ Solitaire.app */,
+				8E464E7624A10CA000AE8533 /* EZ SolitaireTests.xctest */,
+				8E464E8124A10CA100AE8533 /* EZ SolitaireUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E464E6224A10CA000AE8533 /* EZ Solitaire */ = {
+			isa = PBXGroup;
+			children = (
+				8E464E6324A10CA000AE8533 /* AppDelegate.swift */,
+				8E464E6524A10CA000AE8533 /* SceneDelegate.swift */,
+				8E464E6724A10CA000AE8533 /* ViewController.swift */,
+				8E464E6924A10CA000AE8533 /* Main.storyboard */,
+				8E464E6C24A10CA000AE8533 /* Assets.xcassets */,
+				8E464E6E24A10CA000AE8533 /* LaunchScreen.storyboard */,
+				8E464E7124A10CA000AE8533 /* Info.plist */,
+			);
+			path = "EZ Solitaire";
+			sourceTree = "<group>";
+		};
+		8E464E7924A10CA100AE8533 /* EZ SolitaireTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E464E7A24A10CA100AE8533 /* EZ_SolitaireTests.swift */,
+				8E464E7C24A10CA100AE8533 /* Info.plist */,
+			);
+			path = "EZ SolitaireTests";
+			sourceTree = "<group>";
+		};
+		8E464E8424A10CA100AE8533 /* EZ SolitaireUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8E464E8524A10CA100AE8533 /* EZ_SolitaireUITests.swift */,
+				8E464E8724A10CA100AE8533 /* Info.plist */,
+			);
+			path = "EZ SolitaireUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E464E5F24A10CA000AE8533 /* EZ Solitaire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E464E8A24A10CA100AE8533 /* Build configuration list for PBXNativeTarget "EZ Solitaire" */;
+			buildPhases = (
+				8E464E5C24A10CA000AE8533 /* Sources */,
+				8E464E5D24A10CA000AE8533 /* Frameworks */,
+				8E464E5E24A10CA000AE8533 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EZ Solitaire";
+			productName = "EZ Solitaire";
+			productReference = 8E464E6024A10CA000AE8533 /* EZ Solitaire.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E464E7524A10CA000AE8533 /* EZ SolitaireTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E464E8D24A10CA100AE8533 /* Build configuration list for PBXNativeTarget "EZ SolitaireTests" */;
+			buildPhases = (
+				8E464E7224A10CA000AE8533 /* Sources */,
+				8E464E7324A10CA000AE8533 /* Frameworks */,
+				8E464E7424A10CA000AE8533 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E464E7824A10CA100AE8533 /* PBXTargetDependency */,
+			);
+			name = "EZ SolitaireTests";
+			productName = "EZ SolitaireTests";
+			productReference = 8E464E7624A10CA000AE8533 /* EZ SolitaireTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8E464E8024A10CA100AE8533 /* EZ SolitaireUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E464E9024A10CA100AE8533 /* Build configuration list for PBXNativeTarget "EZ SolitaireUITests" */;
+			buildPhases = (
+				8E464E7D24A10CA100AE8533 /* Sources */,
+				8E464E7E24A10CA100AE8533 /* Frameworks */,
+				8E464E7F24A10CA100AE8533 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E464E8324A10CA100AE8533 /* PBXTargetDependency */,
+			);
+			name = "EZ SolitaireUITests";
+			productName = "EZ SolitaireUITests";
+			productReference = 8E464E8124A10CA100AE8533 /* EZ SolitaireUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E464E5824A10CA000AE8533 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Thomas S. Irgens";
+				TargetAttributes = {
+					8E464E5F24A10CA000AE8533 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					8E464E7524A10CA000AE8533 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 8E464E5F24A10CA000AE8533;
+					};
+					8E464E8024A10CA100AE8533 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 8E464E5F24A10CA000AE8533;
+					};
+				};
+			};
+			buildConfigurationList = 8E464E5B24A10CA000AE8533 /* Build configuration list for PBXProject "EZ Solitaire" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E464E5724A10CA000AE8533;
+			productRefGroup = 8E464E6124A10CA000AE8533 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E464E5F24A10CA000AE8533 /* EZ Solitaire */,
+				8E464E7524A10CA000AE8533 /* EZ SolitaireTests */,
+				8E464E8024A10CA100AE8533 /* EZ SolitaireUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E464E5E24A10CA000AE8533 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E464E7024A10CA000AE8533 /* LaunchScreen.storyboard in Resources */,
+				8E464E6D24A10CA000AE8533 /* Assets.xcassets in Resources */,
+				8E464E6B24A10CA000AE8533 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E464E7424A10CA000AE8533 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E464E7F24A10CA100AE8533 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E464E5C24A10CA000AE8533 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E464E6824A10CA000AE8533 /* ViewController.swift in Sources */,
+				8E464E6424A10CA000AE8533 /* AppDelegate.swift in Sources */,
+				8E464E6624A10CA000AE8533 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E464E7224A10CA000AE8533 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E464E7B24A10CA100AE8533 /* EZ_SolitaireTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E464E7D24A10CA100AE8533 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E464E8624A10CA100AE8533 /* EZ_SolitaireUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E464E7824A10CA100AE8533 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E464E5F24A10CA000AE8533 /* EZ Solitaire */;
+			targetProxy = 8E464E7724A10CA100AE8533 /* PBXContainerItemProxy */;
+		};
+		8E464E8324A10CA100AE8533 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E464E5F24A10CA000AE8533 /* EZ Solitaire */;
+			targetProxy = 8E464E8224A10CA100AE8533 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8E464E6924A10CA000AE8533 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E464E6A24A10CA000AE8533 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E464E6E24A10CA000AE8533 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E464E6F24A10CA000AE8533 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E464E8824A10CA100AE8533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8E464E8924A10CA100AE8533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E464E8B24A10CA100AE8533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W35NW392H5;
+				INFOPLIST_FILE = "EZ Solitaire/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomassi.EZ-Solitaire";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E464E8C24A10CA100AE8533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W35NW392H5;
+				INFOPLIST_FILE = "EZ Solitaire/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomassi.EZ-Solitaire";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8E464E8E24A10CA100AE8533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W35NW392H5;
+				INFOPLIST_FILE = "EZ SolitaireTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomassi.EZ-SolitaireTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZ Solitaire.app/EZ Solitaire";
+			};
+			name = Debug;
+		};
+		8E464E8F24A10CA100AE8533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W35NW392H5;
+				INFOPLIST_FILE = "EZ SolitaireTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomassi.EZ-SolitaireTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZ Solitaire.app/EZ Solitaire";
+			};
+			name = Release;
+		};
+		8E464E9124A10CA100AE8533 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W35NW392H5;
+				INFOPLIST_FILE = "EZ SolitaireUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomassi.EZ-SolitaireUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "EZ Solitaire";
+			};
+			name = Debug;
+		};
+		8E464E9224A10CA100AE8533 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W35NW392H5;
+				INFOPLIST_FILE = "EZ SolitaireUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.thomassi.EZ-SolitaireUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "EZ Solitaire";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E464E5B24A10CA000AE8533 /* Build configuration list for PBXProject "EZ Solitaire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E464E8824A10CA100AE8533 /* Debug */,
+				8E464E8924A10CA100AE8533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E464E8A24A10CA100AE8533 /* Build configuration list for PBXNativeTarget "EZ Solitaire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E464E8B24A10CA100AE8533 /* Debug */,
+				8E464E8C24A10CA100AE8533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E464E8D24A10CA100AE8533 /* Build configuration list for PBXNativeTarget "EZ SolitaireTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E464E8E24A10CA100AE8533 /* Debug */,
+				8E464E8F24A10CA100AE8533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E464E9024A10CA100AE8533 /* Build configuration list for PBXNativeTarget "EZ SolitaireUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E464E9124A10CA100AE8533 /* Debug */,
+				8E464E9224A10CA100AE8533 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E464E5824A10CA000AE8533 /* Project object */;
+}
