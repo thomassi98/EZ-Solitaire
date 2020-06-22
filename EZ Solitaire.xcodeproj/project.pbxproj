@@ -15,6 +15,9 @@
 		8E464E7024A10CA000AE8533 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E464E6E24A10CA000AE8533 /* LaunchScreen.storyboard */; };
 		8E464E7B24A10CA100AE8533 /* EZ_SolitaireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E7A24A10CA100AE8533 /* EZ_SolitaireTests.swift */; };
 		8E464E8624A10CA100AE8533 /* EZ_SolitaireUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E8524A10CA100AE8533 /* EZ_SolitaireUITests.swift */; };
+		8E464E9424A1624D00AE8533 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E9324A1624D00AE8533 /* Card.swift */; };
+		8E464E9624A167C500AE8533 /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E9524A167C500AE8533 /* CardFactory.swift */; };
+		8E464E9A24A1750000AE8533 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E9924A1750000AE8533 /* GameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		8E464E8124A10CA100AE8533 /* EZ SolitaireUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EZ SolitaireUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E464E8524A10CA100AE8533 /* EZ_SolitaireUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZ_SolitaireUITests.swift; sourceTree = "<group>"; };
 		8E464E8724A10CA100AE8533 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E464E9324A1624D00AE8533 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		8E464E9524A167C500AE8533 /* CardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
+		8E464E9924A1750000AE8533 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				8E464E6324A10CA000AE8533 /* AppDelegate.swift */,
 				8E464E6524A10CA000AE8533 /* SceneDelegate.swift */,
 				8E464E6724A10CA000AE8533 /* ViewController.swift */,
+				8E464E9924A1750000AE8533 /* GameModel.swift */,
+				8E464E9324A1624D00AE8533 /* Card.swift */,
+				8E464E9524A167C500AE8533 /* CardFactory.swift */,
 				8E464E6924A10CA000AE8533 /* Main.storyboard */,
 				8E464E6C24A10CA000AE8533 /* Assets.xcassets */,
 				8E464E6E24A10CA000AE8533 /* LaunchScreen.storyboard */,
@@ -262,6 +271,9 @@
 				8E464E6824A10CA000AE8533 /* ViewController.swift in Sources */,
 				8E464E6424A10CA000AE8533 /* AppDelegate.swift in Sources */,
 				8E464E6624A10CA000AE8533 /* SceneDelegate.swift in Sources */,
+				8E464E9624A167C500AE8533 /* CardFactory.swift in Sources */,
+				8E464E9424A1624D00AE8533 /* Card.swift in Sources */,
+				8E464E9A24A1750000AE8533 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W35NW392H5;
 				INFOPLIST_FILE = "EZ Solitaire/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,6 +468,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W35NW392H5;
 				INFOPLIST_FILE = "EZ Solitaire/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
