@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var model = GameModel()
-    var deck = [Card]()
+    private var model = GameModel()
+    private var deck = [Card]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

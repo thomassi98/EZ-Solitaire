@@ -9,8 +9,6 @@
 import Foundation
 
 class CardFactory{
-    init() {
-    }
     
     func standardDeck() ->  [Card] {
         //Generate and return an array with a standard Wish Solitaire deck
@@ -20,7 +18,7 @@ class CardFactory{
         
         for value in values{
             for type in types{
-                let card = Card(type: type, value: value, image: value+"_of_"+type)
+                let card = Card(type: type, value: value)
                 deck.append(card)
             }
         }

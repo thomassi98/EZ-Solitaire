@@ -1,15 +1,14 @@
 //
-//  EZ_SolitaireTests.swift
-//  EZ SolitaireTests
+//  UnitTests.swift
+//  UnitTests
 //
-//  Created by Arild Solberg on 22/06/2020.
+//  Created by Thomas Solberg Irgens on 28/06/2020.
 //  Copyright © 2020 Thomas S. Irgens. All rights reserved.
 //
 
 import XCTest
-@testable import EZ_Solitaire
 
-class EZ_SolitaireTests: XCTestCase {
+class UnitTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -26,7 +25,7 @@ class EZ_SolitaireTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
