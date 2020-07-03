@@ -10,9 +10,11 @@ import XCTest
 
 class CardFactoryTests: XCTestCase {
     
-    //TODO move to CardFactory and test here?
+    //TODO move to CardFactory and test here instead?
+    ///Checks for Card duplicates in Card Array
+    /// - Parameter cards: Array of Card objects
+    /// - Returns: Bool, true if no duplicates, false otherwise
     func noDupes(cards: [Card]) -> Bool {
-        //Check for card duplicates
         //TODO make prettier
         
         for card1 in cards {
@@ -30,16 +32,20 @@ class CardFactoryTests: XCTestCase {
         return true
     }
     
+    ///Checks that Card array size is correct
+    /// - Parameters :
+    ///     - list: Array containing Card objects
+    ///     - num: Desired array size
+    /// - Returns: Bool, true if array contains num amount of Card, false otherwise
     func requiredSize(list: [Card], num: Int) -> Bool {
-        //Check if deck size matches num
         if list.count == num {
             return true
         }
         return false
     }
     
+    ///Tests that CardFactory can build and return proper decks
     func testStandardDeck() {
-        //Tests that Card Factory can build and return proper decks
         let N = 1000
         var iteration = 0
         

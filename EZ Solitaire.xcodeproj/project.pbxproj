@@ -16,11 +16,13 @@
 		8E464E9424A1624D00AE8533 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E9324A1624D00AE8533 /* Card.swift */; };
 		8E464E9624A167C500AE8533 /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E9524A167C500AE8533 /* CardFactory.swift */; };
 		8E464E9A24A1750000AE8533 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E9924A1750000AE8533 /* GameModel.swift */; };
-		8E90AD3724A90FA60046F44E /* UnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E90AD3624A90FA60046F44E /* UnitTests.swift */; };
+		8E8BC03B24ABAE7900EA5D45 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E9924A1750000AE8533 /* GameModel.swift */; };
+		8E8BC03D24ABB55F00EA5D45 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8BC03C24ABB55F00EA5D45 /* CardCollectionViewCell.swift */; };
 		8E90AD3E24A90FAE0046F44E /* CardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB2A36024A3E77A004D4784 /* CardTests.swift */; };
 		8ED0BC0524AA3A730026111E /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E9324A1624D00AE8533 /* Card.swift */; };
 		8ED0BC0724AA407A0026111E /* CardFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0BC0624AA407A0026111E /* CardFactoryTests.swift */; };
 		8ED0BC0824AA407D0026111E /* CardFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E464E9524A167C500AE8533 /* CardFactory.swift */; };
+		8ED0BC0A24AA66F40026111E /* GameModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ED0BC0924AA66F40026111E /* GameModelTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,11 +47,12 @@
 		8E464E9324A1624D00AE8533 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		8E464E9524A167C500AE8533 /* CardFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactory.swift; sourceTree = "<group>"; };
 		8E464E9924A1750000AE8533 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		8E8BC03C24ABB55F00EA5D45 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E90AD3424A90FA60046F44E /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8E90AD3624A90FA60046F44E /* UnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTests.swift; sourceTree = "<group>"; };
 		8E90AD3824A90FA60046F44E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EB2A36024A3E77A004D4784 /* CardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTests.swift; sourceTree = "<group>"; };
 		8ED0BC0624AA407A0026111E /* CardFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFactoryTests.swift; sourceTree = "<group>"; };
+		8ED0BC0924AA66F40026111E /* GameModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,7 @@
 				8E464E9924A1750000AE8533 /* GameModel.swift */,
 				8E464E9324A1624D00AE8533 /* Card.swift */,
 				8E464E9524A167C500AE8533 /* CardFactory.swift */,
+				8E8BC03C24ABB55F00EA5D45 /* CardCollectionViewCell.swift */,
 				8E464E6924A10CA000AE8533 /* Main.storyboard */,
 				8E464E6C24A10CA000AE8533 /* Assets.xcassets */,
 				8E464E6E24A10CA000AE8533 /* LaunchScreen.storyboard */,
@@ -109,9 +113,9 @@
 			isa = PBXGroup;
 			children = (
 				8EB2A36024A3E77A004D4784 /* CardTests.swift */,
-				8E90AD3624A90FA60046F44E /* UnitTests.swift */,
 				8E90AD3824A90FA60046F44E /* Info.plist */,
 				8ED0BC0624AA407A0026111E /* CardFactoryTests.swift */,
+				8ED0BC0924AA66F40026111E /* GameModelTest.swift */,
 			);
 			path = UnitTests;
 			sourceTree = "<group>";
@@ -221,6 +225,7 @@
 				8E464E6424A10CA000AE8533 /* AppDelegate.swift in Sources */,
 				8E464E6624A10CA000AE8533 /* SceneDelegate.swift in Sources */,
 				8E464E9624A167C500AE8533 /* CardFactory.swift in Sources */,
+				8E8BC03D24ABB55F00EA5D45 /* CardCollectionViewCell.swift in Sources */,
 				8E464E9424A1624D00AE8533 /* Card.swift in Sources */,
 				8E464E9A24A1750000AE8533 /* GameModel.swift in Sources */,
 			);
@@ -230,11 +235,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E90AD3724A90FA60046F44E /* UnitTests.swift in Sources */,
 				8E90AD3E24A90FAE0046F44E /* CardTests.swift in Sources */,
 				8ED0BC0724AA407A0026111E /* CardFactoryTests.swift in Sources */,
 				8ED0BC0824AA407D0026111E /* CardFactory.swift in Sources */,
 				8ED0BC0524AA3A730026111E /* Card.swift in Sources */,
+				8ED0BC0A24AA66F40026111E /* GameModelTest.swift in Sources */,
+				8E8BC03B24ABAE7900EA5D45 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

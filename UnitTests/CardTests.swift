@@ -12,9 +12,8 @@ import Foundation
 
 class CardTests: XCTestCase {
 
+    ///Tests that Card instantiates and stores values properly
     func testCardValues(){
-        //Tests that Card instantiates and stores values properly
-        
         let card = Card(type: "diamonds", value: "ace")
         
         XCTAssertEqual(card.getType(), "diamonds")
@@ -24,14 +23,12 @@ class CardTests: XCTestCase {
     }
     
 
+    //Tests match function
     func testMatch() {
-        //Tests match function
-        
         let card = Card(type: "diamonds", value: "ace")
         
         XCTAssertEqual(card.isMatched(), false)
         card.match()
         XCTAssertEqual(card.isMatched(), true)
     }
-    
 }

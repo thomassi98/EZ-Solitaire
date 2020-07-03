@@ -23,9 +23,8 @@ class Card : Equatable {
         self.image = value+"_of_"+type
     }
     
-    
+    ///Override of == function to compare by data instead of reference
     static func == (lhs: Card, rhs: Card) -> Bool {
-        //Override of == function to compare by data instead of reference
         if lhs.getType() != rhs.getType() {
             return false
         }
@@ -38,28 +37,40 @@ class Card : Equatable {
         return true
     }
     
-    //Returns card type
+    ///Gets Card type
+    /// - Returns: String containing type name
     func getType() -> String {
         return type
     }
     
-    //Returns card value
+    ///Gets Card value
+    /// - Returns: String containing value name
     func getValue() -> String {
         return value
     }
     
-    //Returns card image name
+    ///Gets Card image name
+    /// - Returns: String containing image name
     func getImage() -> String {
         return image
     }
     
-    //Returns card match state
+    ///Checks if this Card matches with other Card
+    /// - Parameter other: Other Card object to be compared
+    /// - Returns: True if Card objects  match, False otherwise
+    func isMatch(other: Card) -> Bool {
+        return self == other
+    }
+    
+    ///Gets Card match state
+    /// - Returns: Bool, true if Card is matched, false otherwise
     func isMatched() -> Bool{
         return matched
     }
     
-    //Returns true if card has already been matched, false otherwise
+    ///Changes Card match state to true
     func match() -> Void {
+    //Returns true if card has already been matched, false otherwise
         matched = true
     }
 }

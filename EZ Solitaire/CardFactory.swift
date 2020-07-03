@@ -10,8 +10,9 @@ import Foundation
 
 class CardFactory{
     
+    ///Returns an array with a standard Wish Solitaire deck
+    /// - Returns: Array containing 32 unique Card objects
     func standardDeck() ->  [Card] {
-        //Generate and return an array with a standard Wish Solitaire deck
         var deck = [Card]()
         let types = ["clubs", "diamonds", "hearts", "spades"]
         let values = ["ace", "7", "8", "9", "10", "jack", "queen", "king"]
