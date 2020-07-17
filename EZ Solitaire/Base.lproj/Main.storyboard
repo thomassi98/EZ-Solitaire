@@ -21,8 +21,8 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cDa-39-uYr">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RAv-RG-VcW">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="3" id="RAv-RG-VcW">
                                     <size key="itemSize" width="224" height="324"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -41,6 +41,7 @@
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="nFB-eZ-B46">
                                                     <rect key="frame" x="0.0" y="0.0" width="224" height="324"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="324" id="eO4-2T-l7a"/>
                                                         <constraint firstAttribute="width" constant="224" id="nS6-x6-CUt"/>
@@ -58,6 +59,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="nFB-eZ-B46" secondAttribute="bottom" id="uNG-ko-7d0"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="backImageView" destination="nFB-eZ-B46" id="Be0-uz-JHv"/>
                                             <outlet property="frontImageView" destination="Zs4-g3-JGI" id="m6f-g6-Uxt"/>
@@ -85,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3274" y="33"/>
+            <point key="canvasLocation" x="-4110.144927536232" y="-139.28571428571428"/>
         </scene>
     </scenes>
     <resources>

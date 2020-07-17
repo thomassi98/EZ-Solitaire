@@ -10,8 +10,11 @@ import Foundation
 
 class GameModel{
     private var deck = [Card]()
+    private var choices = [Card]()
+    private var choiceCounter: Int
     
     init(){
+        choiceCounter = 0
         generateDeck()
     }
     
@@ -20,7 +23,45 @@ class GameModel{
         let factory = CardFactory()
         deck = factory.standardDeck()
     }
+    
+    func remainingCards() -> Int {
+        return deck.count
+    }
+    
+    ///Chooses Card if no more than two Card unmatched Card objects are chosen, deselects the chosen Cards otherwise
+    func chooseCard(card: Card) {
+        switch choiceCounter {
+        case 0:
+            choices.append(card)
+            card.choose()
+        case 1:
+            choices.append(card)
+            card.choose()
+            //if choices[0]
+        default:
+            deselectChoices()
+            clearChoices()
+        }
+    }
 
+    ///Deselects choices if there are any
+    func deselectChoices() {
+        if !choices.isEmpty {
+            for card in choices {
+                card.unChoose()
+            }
+        }
+    }
+    
+    ///Resets choices
+    func clearChoices() {
+        choices = [Card]()
+    }
+    
+    ///Returns true if win conditions are met, false otherwise
+    func winCheck() -> Bool {
+        return false
+    }
     
     ///Removes 8 Card objects from deck and returns them, if possible
     /// - Returns: Array of 8 Card objects,

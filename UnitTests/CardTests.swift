@@ -24,11 +24,13 @@ class CardTests: XCTestCase {
     
 
     //Tests match function
-    func testMatch() {
+    func testtryMatch() {
         let card = Card(type: "diamonds", value: "ace")
+        let card2 = Card(type: "diamonds", value: "ace")
         
         XCTAssertEqual(card.isMatched(), false)
-        card.match()
+        card.tryMatch(card2)
+        card2.tryMatch(card)
         XCTAssertEqual(card.isMatched(), true)
     }
 }

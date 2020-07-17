@@ -14,16 +14,15 @@ class GameModelTest: XCTestCase {
     
     ///Tests that GameModel creates and stores proper deck
     func testStoreDeck(){
-        let game = GameModel()
         
         let N = 100
         var iteration = 0
             
         while iteration < N {
+            let game = GameModel()
             iteration += 1
             
-            let deck = game.getDeck()
-            XCTAssertEqual(32, deck.count)
+            XCTAssertEqual(32, game.remainingCards())
         }
     }
 }

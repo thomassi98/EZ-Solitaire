@@ -14,6 +14,7 @@ class Card : Equatable {
     private var type: String
     private var value: String
     private var image: String
+    private var isChosen = false
     private var matched = false
     
     
@@ -37,6 +38,16 @@ class Card : Equatable {
         return true
     }
     
+    ///Sets isChosen to true
+    func choose() {
+        isChosen = true
+    }
+    
+    ///Sets isChosen to false
+    func unChoose() {
+        isChosen = false
+    }
+    
     ///Gets Card type
     /// - Returns: String containing type name
     func getType() -> String {
@@ -55,22 +66,17 @@ class Card : Equatable {
         return image
     }
     
-    ///Checks if this Card matches with other Card
+    ///Sets this Card objects match state to true if similar to other Card object (should be used on both)
     /// - Parameter other: Other Card object to be compared
-    /// - Returns: True if Card objects  match, False otherwise
-    func isMatch(other: Card) -> Bool {
-        return self == other
+    func tryMatch(_ other: Card) {
+        if self == other {
+            self.matched = true
+        }
     }
     
     ///Gets Card match state
     /// - Returns: Bool, true if Card is matched, false otherwise
     func isMatched() -> Bool{
         return matched
-    }
-    
-    ///Changes Card match state to true
-    func match() -> Void {
-    //Returns true if card has already been matched, false otherwise
-        matched = true
     }
 }
