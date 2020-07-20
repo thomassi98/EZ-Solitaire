@@ -25,4 +25,30 @@ class GameModelTest: XCTestCase {
             XCTAssertEqual(32, game.remainingCards())
         }
     }
+    
+    ///Tests choosing/higlighting system
+    func testMax2Choices() {
+        let game = GameModel()
+        let deck = try! game.dealCards()
+        
+        game.chooseCard(card: deck[0])
+        game.chooseCard(card: deck[3])
+        
+        XCTAssertEqual(deck[0].isChosen(), false)
+        XCTAssertEqual(deck[3].isChosen(), false)
+        
+        game.chooseCard(card: deck[5])
+        
+        XCTAssertEqual(deck[0].isChosen(), false)
+        XCTAssertEqual(deck[3].isChosen(), false)
+        XCTAssertEqual(deck[5].isChosen(), true)
+        
+        game.chooseCard(card: deck[5])
+        game.chooseCard(card: deck[0])
+        
+        XCTAssertEqual(deck[0].isChosen(), true)
+        XCTAssertEqual(deck[3].isChosen(), false)
+        XCTAssertEqual(deck[5].isChosen(), false)
+        
+    }
 }

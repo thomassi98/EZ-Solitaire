@@ -14,7 +14,7 @@ class Card : Equatable {
     private var type: String
     private var value: String
     private var image: String
-    private var isChosen = false
+    private var chosen = false
     private var matched = false
     
     
@@ -40,12 +40,12 @@ class Card : Equatable {
     
     ///Sets isChosen to true
     func choose() {
-        isChosen = true
+        chosen = true
     }
     
     ///Sets isChosen to false
     func unChoose() {
-        isChosen = false
+        chosen = false
     }
     
     ///Gets Card type
@@ -74,9 +74,20 @@ class Card : Equatable {
         }
     }
     
+    func matchBoth(_ other: Card) {
+        tryMatch(other)
+        other.tryMatch(self)
+    }
+    
     ///Gets Card match state
     /// - Returns: Bool, true if Card is matched, false otherwise
     func isMatched() -> Bool{
         return matched
+    }
+    
+    ///Gets Card chosen state
+    /// - Returns: Bool, true if Card is chosen, false otherwise
+    func isChosen() -> Bool {
+        return chosen
     }
 }

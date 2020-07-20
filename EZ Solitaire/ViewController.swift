@@ -33,7 +33,33 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         do {
             try hand = model.dealCards()
         } catch {
-            print("Error: Not recieving proper amount of cards")
+            print("Error: Not enough cards left in deck.")
+        }
+    }
+    
+    ///Iterates cells and updates them according to game rules
+    func doTurn() {
+        for cells in collectionView.visibleCells as! [CardCollectionViewCell] {
+            
+            //Attempts to fetch new Card from models deck, flips cell if none found
+            if cells.getCard().isMatched() {
+                do {
+                    try cells.setCard(model.dealCard())
+                }
+                catch {
+                    if !cells.isFlipped() {
+                    cells.flipBack()
+                    }
+                }
+            }
+            
+            //Synchronizes chosen cells with associated chosen Card objects
+            if cells.getCard().isChosen() {
+                cells.choose()
+            }
+            else {
+                cells.unChoose()
+            }
         }
     }
 
@@ -56,15 +82,23 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //Sets cell image to Card objects image
         cell.setCard(card)
         
+        //Flips to the front of the Card Cell
+        cell.flip()
+        
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+        let card = cell.getCard()
         
-        //Flip cell
-        cell.flip()
+        
+        //Highlight cell and do turn
+        if !cell.isFlipped() {
+            model.chooseCard(card: card)
+            doTurn()
+        }
     }
 }
 

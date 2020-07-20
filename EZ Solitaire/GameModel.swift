@@ -28,22 +28,25 @@ class GameModel{
         return deck.count
     }
     
-    ///Chooses Card if no more than two Card unmatched Card objects are chosen, deselects the chosen Cards otherwise
+    ///Chooses Card if no more than one unmatched Card object is chosen, deselects the chosen Card objects otherwise. If chosen and selected Card object matches, they are marked as such.
+    /// - Parameter card: Target Card object
     func chooseCard(card: Card) {
         switch choiceCounter {
         case 0:
             choices.append(card)
             card.choose()
-        case 1:
-            choices.append(card)
-            card.choose()
-            //if choices[0]
+            choiceCounter += 1
         default:
+            if choices[0].getType() != card.getType() {
+                choices[0].matchBoth(card)
+            }
             deselectChoices()
             clearChoices()
         }
     }
 
+    
+    
     ///Deselects choices if there are any
     func deselectChoices() {
         if !choices.isEmpty {
@@ -56,7 +59,10 @@ class GameModel{
     ///Resets choices
     func clearChoices() {
         choices = [Card]()
+        choiceCounter = 0
     }
+    
+    ///If chosen Card objects match, marks them as "Matched" and removes them from the hand
     
     ///Returns true if win conditions are met, false otherwise
     func winCheck() -> Bool {

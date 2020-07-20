@@ -48,6 +48,7 @@
                                                     </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="nFB-eZ-B46" firstAttribute="top" secondItem="Qvb-kY-LQG" secondAttribute="top" id="B1B-9S-Q6T"/>
                                                 <constraint firstAttribute="trailing" secondItem="nFB-eZ-B46" secondAttribute="trailing" id="CHd-MU-QuY"/>
@@ -59,7 +60,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="nFB-eZ-B46" secondAttribute="bottom" id="uNG-ko-7d0"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="backImageView" destination="nFB-eZ-B46" id="Be0-uz-JHv"/>
                                             <outlet property="frontImageView" destination="Zs4-g3-JGI" id="m6f-g6-Uxt"/>
