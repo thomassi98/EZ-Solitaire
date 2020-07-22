@@ -71,6 +71,7 @@ class CardCollectionViewCell: UICollectionViewCell {
         //Adds new
         numLabel = UILabel(frame: CGRect(x: self.bounds.midX-25, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         numLabel.text = "Empty"
+        numLabel.textColor = UIColor.white
         numLabel.sizeToFit()
         //numLabel.layer.cornerRadius = numLabel.frame.width/2
         //textView.textAlignment = .center
