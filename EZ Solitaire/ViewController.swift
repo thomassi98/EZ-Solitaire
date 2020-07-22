@@ -37,9 +37,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     
+    
     ///Iterates cells and updates them according to game rules
     func doTurn() {
         for cells in collectionView.visibleCells as! [CardCollectionViewCell] {
+            //Checks win-conditions
+            if model.winCheck() {
+                activateVictory()
+            }
+            //Checks loss-conditions
+            if model.lossCheck() {
+                activateLoss()
+            }
             
             //Attempts to fetch new Card from models deck, flips cell if none found
             if cells.getCard().isMatched() {
@@ -83,6 +92,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 cells.unChoose()
             }
         }
+    }
+    
+    ///Stops game and displays victory-label
+    func activateVictory() {
+        let victoryLabel = UILabel(frame: CGRect(x: view.bounds.midX, y: view.bounds.midY, width: view.bounds.maxX/2, height: view.bounds.maxY/6))
+        
+        victoryLabel.text = "You win!"
+        victoryLabel.textColor = UIColor.green
+        victoryLabel.font.withSize(30)
+        view.addSubview(victoryLabel)
+    }
+    
+    ///Stops game and displays loss-label
+    func activateLoss() {
+        let lossLabel = UILabel(frame: CGRect(x: view.bounds.midX, y: view.bounds.midY, width: view.bounds.maxX/2, height: view.bounds.maxY/6))
+        
+        lossLabel.text = "You lose."
+        lossLabel.textColor = UIColor.red
+        lossLabel.font.withSize(30)
+        view.addSubview(lossLabel)
     }
     
     //MARK: - Protocol overrides

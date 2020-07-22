@@ -170,9 +170,6 @@ class GameModel{
     return false
     }
     
-    func activateVictory() {
-        
-    }
     
     ///Checks and confirms loss conditions
     /// - Returns: True if loss conditions are met, false otherwise
@@ -190,9 +187,6 @@ class GameModel{
         return true
     }
     
-    func activateLoss() {
-        
-    }
     
     ///Errors for GameModel
     enum gameError: Error {
