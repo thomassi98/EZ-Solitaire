@@ -44,11 +44,14 @@ class CardCollectionViewCell: UICollectionViewCell {
     ///Adds a text label on the right corner of the Cell
     /// - Parameter text: String, desired text
     func addNumLabel(text: String) {
-        numLabel = UILabel(frame: CGRect(x: self.bounds.maxX-10, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        numLabel = UILabel(frame: CGRect(x: self.bounds.maxX-20, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         numLabel.backgroundColor = UIColor.black
-        numLabel.text = text
+        numLabel.text = " "+text+" "
+        numLabel.font.withSize(16)
         numLabel.textColor = UIColor.white
         numLabel.sizeToFit()
+        numLabel.layer.cornerRadius = numLabel.frame.size.height/2
+        numLabel.layer.masksToBounds = true
         //numLabel.layer.cornerRadius = numLabel.frame.width/2
         //textView.textAlignment = .center
         addSubview(numLabel)
@@ -57,7 +60,7 @@ class CardCollectionViewCell: UICollectionViewCell {
     ///Changes text label on the right corner of the Cell
     /// - Parameter text: String, desired text
     func changeNumLabel(text: String) {
-        numLabel.text = text
+        numLabel.text = " "+text+" "
     }
     
     ///Edits the Label to display "Empty" when Card stack is empty
