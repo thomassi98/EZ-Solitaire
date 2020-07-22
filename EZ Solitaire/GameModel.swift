@@ -155,13 +155,43 @@ class GameModel{
     ///Checks and confirms win conditions
     /// - Returns: True if win conditions are met, false otherwise
     func winCheck() -> Bool {
-        return false
+        var placeHolderCounter = 0
+        
+        for card in currentHand {
+            if card.getType() == "placeholder" {
+                placeHolderCounter += 1
+            }
+        }
+        
+        if placeHolderCounter == 8 {
+            return true
+        }
+        
+    return false
+    }
+    
+    func activateVictory() {
+        
     }
     
     ///Checks and confirms loss conditions
     /// - Returns: True if loss conditions are met, false otherwise
     func lossCheck() -> Bool {
-        return false
+        for card1 in currentHand {
+            for card2 in currentHand {
+                
+                //Returns true if there are any avaliable matches
+                if card1 == card2 {
+                    return false
+                }
+            }
+        }
+        //False otherwise
+        return true
+    }
+    
+    func activateLoss() {
+        
     }
     
     ///Errors for GameModel

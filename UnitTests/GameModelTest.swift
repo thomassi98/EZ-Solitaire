@@ -142,10 +142,14 @@ class GameModelTest: XCTestCase {
     ///Tests that winCheck function can confirm win condition
     func testwinCheck() {
         let game = GameModel()
+        let placeHolderCard = Card(type: "placeholder", value: "placeholder")
+        var hand = [Card]()
         
-        for _ in 1...4 {
-            try! game.dealCards()
+        for _ in 1...8 {
+            hand.append(placeHolderCard)
         }
+        game.updateHand(stack: hand)
+        
         XCTAssertEqual(game.winCheck(), true)
     }
     
@@ -156,7 +160,7 @@ class GameModelTest: XCTestCase {
         let impossibleCard = Card(type: "placeholder", value: "placeholder")
         var hand = [Card]()
         
-        for i in 1...8 {
+        for _ in 1...8 {
             hand.append(impossibleCard)
         }
         game.updateHand(stack: hand)
