@@ -22,11 +22,19 @@ class CardTests: XCTestCase {
         
     }
     
+    ///Tests override of ==
+    func testEqualsOverride() {
+        let card1 = Card(type: "diamonds", value: "ace")
+        let card2 = Card(type: "clubs", value: "ace")
+        
+        XCTAssertEqual(card1==card2, true)
+    }
+    
 
     ///Tests Card object match function
     func testTryMatch() {
         let card = Card(type: "diamonds", value: "ace")
-        let card2 = Card(type: "diamonds", value: "ace")
+        let card2 = Card(type: "clubs", value: "ace")
         
         XCTAssertEqual(card.isMatched(), false)
         card.tryMatch(card2)
@@ -37,7 +45,7 @@ class CardTests: XCTestCase {
     ///Tests Card object mutual match function
     func testMatchBoth() {
         let card = Card(type: "diamonds", value: "ace")
-        let card2 = Card(type: "diamonds", value: "ace")
+        let card2 = Card(type: "clubs", value: "ace")
         
         XCTAssertEqual(card.isMatched(), false)
         card.matchBoth(card2)

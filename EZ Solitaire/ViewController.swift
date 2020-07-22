@@ -19,7 +19,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Width and height specifications
+        //Width and height specifications on cells
         let width = view.frame.size.width / 3
         let height = view.frame.size.height / 5
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
@@ -37,6 +37,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }
     }
     
+    
     ///Iterates cells and updates them according to game rules
     func doTurn() {
         for cells in collectionView.visibleCells as! [CardCollectionViewCell] {
@@ -45,6 +46,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             if cells.getCard().isMatched() {
                 do {
                     try cells.setCard(model.dealCard())
+                    cells.flipBack()
+                    cells.flip()
+                    cells.addNumLabel(text: "4")
                 }
                 catch {
                     if !cells.isFlipped() {
@@ -62,7 +66,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
     }
-
+    
     //MARK: - Protocol overrides
     
     //How many cells
@@ -70,17 +74,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return hand.count
     }
     
-    //Which cells
+    
+    //Individual cell setup
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         //Gets cell object
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell
         
-        //Gets the corresponding Card object
+        //Gets the cell index
         let card = hand[indexPath.row]
         
         //Sets cell image to Card objects image
         cell.setCard(card)
+        
+        //Sets remaining card number in corner
+        cell.addNumLabel(text: "5")
         
         //Flips to the front of the Card Cell
         cell.flip()
@@ -88,6 +96,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return cell
     }
 
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell

@@ -20,7 +20,7 @@ class CardFactoryTests: XCTestCase {
         for card1 in cards {
             var index2 = 1
             for card2 in Array(cards[index2...]) {
-                if card1 == card2 {
+                if card1 == card2 && card1.getType() == card2.getType(){
                     return false
                 }
                 index2 += 1

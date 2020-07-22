@@ -24,15 +24,15 @@ class Card : Equatable {
         self.image = value+"_of_"+type
     }
     
-    ///Override of == function to compare by data instead of reference
+    ///Override of == function to compare by Card only by value, not reference. Cards can´t be exact copies.
     static func == (lhs: Card, rhs: Card) -> Bool {
-        if lhs.getType() != rhs.getType() {
+        if lhs.getType() == rhs.getType() {
             return false
         }
         if lhs.getValue() != rhs.getValue() {
             return false
         }
-        if lhs.getImage() != rhs.getImage() {
+        if lhs.getImage() == rhs.getImage() {
             return false
         }
         return true

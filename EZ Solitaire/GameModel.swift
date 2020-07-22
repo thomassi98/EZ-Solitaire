@@ -36,10 +36,13 @@ class GameModel{
             choices.append(card)
             card.choose()
             choiceCounter += 1
-        default:
+        case 1:
             if choices[0].getType() != card.getType() {
                 choices[0].matchBoth(card)
             }
+            deselectChoices()
+            clearChoices()
+        default:
             deselectChoices()
             clearChoices()
         }

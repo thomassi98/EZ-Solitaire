@@ -51,4 +51,17 @@ class GameModelTest: XCTestCase {
         XCTAssertEqual(deck[5].isChosen(), false)
         
     }
+    
+    ///Tests chooseCard matching
+    func testChooseCardMatchesCards() {
+        let game = GameModel()
+        let card1 = Card(type: "clubs", value: "7")
+        let card2 = Card(type: "hearts", value: "7")
+        
+        game.chooseCard(card: card1)
+        game.chooseCard(card: card2)
+        
+        XCTAssertEqual(card1.isMatched(), true)
+        XCTAssertEqual(card2.isMatched(), true)
+    }
 }

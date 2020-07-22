@@ -41,7 +41,6 @@
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="nFB-eZ-B46">
                                                     <rect key="frame" x="0.0" y="0.0" width="224" height="324"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="324" id="eO4-2T-l7a"/>
                                                         <constraint firstAttribute="width" constant="224" id="nS6-x6-CUt"/>
@@ -88,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4110.144927536232" y="-139.28571428571428"/>
+            <point key="canvasLocation" x="-7554" y="-196"/>
         </scene>
     </scenes>
     <resources>
