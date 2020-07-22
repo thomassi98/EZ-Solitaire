@@ -10,10 +10,10 @@ import Foundation
 
 class GameModel{
     
-    internal var deck = [[Card]]() //Nestled list with 8 stacks of 4 Card objects
+    private var deck = [[Card]]() //Nestled list with 8 stacks of 4 Card objects
     private var choices = [Card]()
     private var choiceCounter: Int
-    var currentHand = [Card]()
+    private var currentHand = [Card]()
     
     init(){
         choiceCounter = 0

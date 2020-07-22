@@ -9,7 +9,7 @@
 import XCTest
 
 @testable import EZ_Solitaire
-@testable import GameModel
+
 
 class GameModelTest: XCTestCase {
     
@@ -153,8 +153,14 @@ class GameModelTest: XCTestCase {
     func testlossCheck() {
         let game = GameModel()
         
-        //Review privacy policy in deck after tests passing
-        game.deck = [
+        let impossibleCard = Card(type: "placeholder", value: "placeholder")
+        var hand = [Card]()
         
+        for i in 1...8 {
+            hand.append(impossibleCard)
+        }
+        game.updateHand(stack: hand)
+        
+        XCTAssertEqual(game.lossCheck(), true)
     }
 }
