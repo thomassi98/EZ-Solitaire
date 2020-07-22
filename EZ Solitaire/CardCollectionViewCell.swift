@@ -13,18 +13,28 @@ class CardCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var frontImageView: UIImageView!
     @IBOutlet private weak var backImageView: UIImageView!
     
+    private var index = 0
     private var numLabel = UILabel()
-    private var cardsLeft = 5
+    private var cardsLeft = 5       //Initial value will be 4 after setting Card
     private var chosen = false
     private var flipped = false
     private var card = Card(type: "placeholder", value: "placeholder")
     
+    
+    func setIndex(index: Int) {
+        self.index = index
+    }
+    
+    func getIndex() -> Int {
+        return index
+    }
     
     ///Sets front image for Card cell
     /// - Parameter card: Card object
     func setCard(_ card: Card) {
         if cardsLeft > 0 {
             cardsLeft -= 1
+            changeNumLabel(text: String(cardsLeft))
         }
         self.card = card
         

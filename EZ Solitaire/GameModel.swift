@@ -9,7 +9,8 @@
 import Foundation
 
 class GameModel{
-    private var deck = [Card]()
+    
+    private var deck = [[Card]]() //Nestled list with 8 stacks of 4 Card objects
     private var choices = [Card]()
     private var choiceCounter: Int
     
@@ -25,7 +26,7 @@ class GameModel{
     }
     
     func remainingCards() -> Int {
-        return deck.count
+        return Array(deck.joined()).count
     }
     
     ///Chooses Card if no more than one unmatched Card object is chosen, deselects the chosen Card objects otherwise. If chosen and selected Card object matches, they are marked as such.
@@ -72,15 +73,17 @@ class GameModel{
         return false
     }
     
-    ///Removes 8 Card objects from deck and returns them, if possible
+    ///Removes 8 Card objects from all stacjs in the deck and returns them, if possible
     /// - Returns: Array of 8 Card objects,
     /// - Throws: insuffficientCards(cardsNeeded) when not enough Card objects left in deck array.
     func dealCards() throws -> [Card]  {
         
-        if hasCards(amount: 8) {
+        if canDealCards() {
             var hand = [Card]()
-            while hand.count < 8 {
-                hand.append(deck.remove(at: 0))
+            
+            for stackIndex in 0...7 {
+                hand.append(deck[stackIndex][0])
+                deck[stackIndex].remove(at: 0)
             }
             return hand
         }
@@ -91,11 +94,13 @@ class GameModel{
     
     
     ///Removes 1 Card object from deck and returns it.
+    /// - Parameter deck: Int, which deck to deal from 1-8
     /// - Returns: Card object.
     /// - Throws: insuffficientCards(cardsNeeded) when not enough Card objects left in deck array.
-    func dealCard() throws -> Card {
-        if hasCards(amount: 1) {
-            return deck.remove(at: 0)
+    func dealCard(stackNum: Int) throws -> Card {
+        
+        if hasCards(stack: deck[stackNum], amount: 1) {
+            return deck[stackNum].remove(at: 0)
         }
         else {
             throw gameError.insufficientCards(cardsNeeded: 1)
@@ -103,20 +108,46 @@ class GameModel{
     }
 
     
-    ///Returns true if deck has amount or more Card objects left
-    /// - Parameter amount: Amount of objects left in question
+    ///Returns true if array of Cards  has amount or more Card objects left
+    /// - Parameters:
+    ///     - deck: Array of Card objects
+    ///     - amount: Amount of objects left in question
     /// - Returns: True if amount or more objects left, false otherwise
-    func hasCards(amount: Int) -> Bool {
-        if deck.count > amount {
+    func hasCards(stack: [Card], amount: Int) -> Bool {
+        if stack.count >= amount  {
             return true
         }
         return false
     }
     
+    ///Checks if there are enough cards to deal from every deck
+    /// - Parameter amount: Int, how many decks left in question
+    func canDealCards() -> Bool {
+        for stacks in deck {
+            if stacks.count == 0 {
+                return false
+            }
+        }
+        return true
+    }
     
-    /// - Returns: an array copy of the deck
-    func copyDeck() -> [Card] {
-        return deck
+    ///Copies deck Array
+    /// - Returns: A  copy of deck array, Card references stay the same
+    func copyDeck() -> [[Card]] {
+        
+        var deckCopy = [[Card]]()
+        var stackCopy = [Card]()
+        
+        for stack in deck {
+            for card in stack {
+                stackCopy.append(card)
+            }
+
+            deckCopy.append(stackCopy)
+            stackCopy = [Card]()
+        }
+        
+        return deckCopy
     }
     
     

@@ -52,5 +52,11 @@ class CardTests: XCTestCase {
         XCTAssertEqual(card.isMatched(), true)
     }
     
+    //TODO remove
+    func testRemoveLaterCan2DArrayHaveEmptyNestedArrays() {
+        let nested = [[], [], [], []]
+        
+        XCTAssertEqual(nested.count, 4)
+    }
     
 }

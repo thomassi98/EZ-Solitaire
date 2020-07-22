@@ -45,10 +45,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             //Attempts to fetch new Card from models deck, flips cell if none found
             if cells.getCard().isMatched() {
                 do {
-                    try cells.setCard(model.dealCard())
+                    try cells.setCard(model.dealCard(stackNum: cells.getIndex()))
                     cells.flipBack()
                     cells.flip()
-                    cells.changeNumLabel(text: "4")
                 }
                 catch {
                     if !cells.isFlipped() {
@@ -88,8 +87,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //Sets cell image to Card objects image
         cell.setCard(card)
         
+        cell.setIndex(index: indexPath.row)
+        
         //Sets remaining card number in corner
-        cell.addNumLabel(text: "5")
+        cell.addNumLabel(text: "4")
         
         //Flips to the front of the Card Cell
         cell.flip()
