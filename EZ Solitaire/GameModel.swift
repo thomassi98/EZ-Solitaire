@@ -10,9 +10,10 @@ import Foundation
 
 class GameModel{
     
-    private var deck = [[Card]]() //Nestled list with 8 stacks of 4 Card objects
+    internal var deck = [[Card]]() //Nestled list with 8 stacks of 4 Card objects
     private var choices = [Card]()
     private var choiceCounter: Int
+    var currentHand = [Card]()
     
     init(){
         choiceCounter = 0
@@ -27,6 +28,12 @@ class GameModel{
     
     func remainingCards() -> Int {
         return Array(deck.joined()).count
+    }
+    
+    ///Updates hand
+    /// - Parameter stack: Array of 8 Card objects
+    func updateHand(stack: [Card]) {
+        currentHand = stack
     }
     
     ///Chooses Card if no more than one unmatched Card object is chosen, deselects the chosen Card objects otherwise. If chosen and selected Card object matches, they are marked as such.
@@ -65,13 +72,7 @@ class GameModel{
         choices = [Card]()
         choiceCounter = 0
     }
-    
-    ///If chosen Card objects match, marks them as "Matched" and removes them from the hand
-    
-    ///Returns true if win conditions are met, false otherwise
-    func winCheck() -> Bool {
-        return false
-    }
+
     
     ///Removes 8 Card objects from all stacjs in the deck and returns them, if possible
     /// - Returns: Array of 8 Card objects,
@@ -85,6 +86,7 @@ class GameModel{
                 hand.append(deck[stackIndex][0])
                 deck[stackIndex].remove(at: 0)
             }
+            currentHand = hand
             return hand
         }
         else {
@@ -150,6 +152,17 @@ class GameModel{
         return deckCopy
     }
     
+    ///Checks and confirms win conditions
+    /// - Returns: True if win conditions are met, false otherwise
+    func winCheck() -> Bool {
+        return false
+    }
+    
+    ///Checks and confirms loss conditions
+    /// - Returns: True if loss conditions are met, false otherwise
+    func lossCheck() -> Bool {
+        return false
+    }
     
     ///Errors for GameModel
     enum gameError: Error {

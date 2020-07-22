@@ -12,7 +12,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     private var model = GameModel()
     private var hand = [Card]()
-    
     //Card frames
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -45,14 +44,33 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             //Attempts to fetch new Card from models deck, flips cell if none found
             if cells.getCard().isMatched() {
                 do {
-                    try cells.setCard(model.dealCard(stackNum: cells.getIndex()))
+                    //Attempts to fetch new Card
+                    let newCard = try model.dealCard(stackNum: cells.getIndex())
+                    
+                    //Sets new Card in cell
+                    cells.setCard(newCard)
+                    
+                    //Removes old Card from hand and replaces it
+                    hand.remove(at: cells.getIndex())
+                    hand.insert(newCard, at: cells.getIndex())
+                    model.updateHand(stack: hand)
+                    
+                    //Flip effect
                     cells.flipBack()
                     cells.flip()
                 }
                 catch {
                     if !cells.isFlipped() {
+                        
+                        //If Card stack is empty, flips to empty
                         cells.flipBack()
                         cells.displayEmpty()
+                        
+                        //Inserts placeholder in hand
+                        hand.remove(at: cells.getIndex())
+                        hand.insert(Card(type: "placeholder", value: "placeholder"), at: cells.getIndex())
+                        model.updateHand(stack: hand)
+                        
                     }
                 }
             }

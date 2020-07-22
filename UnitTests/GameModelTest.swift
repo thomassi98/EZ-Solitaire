@@ -9,6 +9,7 @@
 import XCTest
 
 @testable import EZ_Solitaire
+@testable import GameModel
 
 class GameModelTest: XCTestCase {
     
@@ -25,6 +26,7 @@ class GameModelTest: XCTestCase {
             XCTAssertEqual(32, game.remainingCards())
         }
     }
+    
     
     ///Tests choosing/higlighting system
     func testMax2Choices() {
@@ -52,6 +54,7 @@ class GameModelTest: XCTestCase {
         
     }
     
+    
     ///Tests chooseCard matching
     func testChooseCardMatchesCards() {
         let game = GameModel()
@@ -64,6 +67,7 @@ class GameModelTest: XCTestCase {
         XCTAssertEqual(card1.isMatched(), true)
         XCTAssertEqual(card2.isMatched(), true)
     }
+    
     
     ///Tests that dealCard deals one Card object from correct stack
     func testdealCardDealsCorrectly() {
@@ -87,6 +91,7 @@ class GameModelTest: XCTestCase {
 
     }
     
+    
     ///Tests that dealCards deals one Card object from each stack
     func testdealCardsDealsCorrectly() {
         let N = 100
@@ -97,6 +102,7 @@ class GameModelTest: XCTestCase {
             
             try! game.dealCards()
             
+            
             for stacks in game.copyDeck() {
                 //Checks that cards have been removed from all stacks
                 XCTAssertEqual(stacks.count, 3)
@@ -106,6 +112,7 @@ class GameModelTest: XCTestCase {
 
         
     }
+    
     
     ///Checks that the copyDeck function returns an identical version of the deck
     func testCopyDeck() {
@@ -126,18 +133,28 @@ class GameModelTest: XCTestCase {
                 
                 XCTAssertEqual(card1, card2)
             }
-         //   for stacks in deckCopy {
-         //       for card in firstCards {
-         //           //Checks that the first cards in the copy matches the first cards taken from the original
-         //           XCTAssertEqual(stacks[0], card)
-         //       }
-         //   }
             counter += 1
         }
 
     }
     
-    func identityTest() {
+    
+    ///Tests that winCheck function can confirm win condition
+    func testwinCheck() {
+        let game = GameModel()
+        
+        for _ in 1...4 {
+            try! game.dealCards()
+        }
+        XCTAssertEqual(game.winCheck(), true)
+    }
+    
+    ///Tests that lossCheck function can confirm loss conditions
+    func testlossCheck() {
+        let game = GameModel()
+        
+        //Review privacy policy in deck after tests passing
+        game.deck = [
         
     }
 }
