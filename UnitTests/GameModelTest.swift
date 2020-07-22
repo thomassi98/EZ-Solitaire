@@ -158,13 +158,25 @@ class GameModelTest: XCTestCase {
         let game = GameModel()
         
         let impossibleCard = Card(type: "placeholder", value: "placeholder")
-        var hand = [Card]()
+        var lossHand = [Card]()
+        var noLossHand = [Card]()
         
         for _ in 1...8 {
-            hand.append(impossibleCard)
+            lossHand.append(impossibleCard)
+            noLossHand.append(impossibleCard)
         }
-        game.updateHand(stack: hand)
+        let compatible1 = Card(type: "clubs", value: "7")
+        let compatible2 = Card(type: "diamond", value: "7")
+        noLossHand.popLast()
+        noLossHand.popLast()
+        noLossHand.append(compatible1)
+        noLossHand.append(compatible2)
         
+        game.updateHand(stack: lossHand)
         XCTAssertEqual(game.lossCheck(), true)
+        
+        game.updateHand(stack: noLossHand)
+        XCTAssertEqual(game.lossCheck(), false)
+        
     }
 }

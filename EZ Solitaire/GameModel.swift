@@ -174,16 +174,19 @@ class GameModel{
     ///Checks and confirms loss conditions
     /// - Returns: True if loss conditions are met, false otherwise
     func lossCheck() -> Bool {
+        var matches = 0
         for card1 in currentHand {
             for card2 in currentHand {
                 
-                //Returns true if there are any avaliable matches
                 if card1 == card2 {
-                    return false
+                    matches += 1
                 }
             }
         }
-        //False otherwise
+        
+        if (matches > 0) {
+            return false
+        }
         return true
     }
     
