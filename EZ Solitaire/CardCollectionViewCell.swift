@@ -34,12 +34,12 @@ class CardCollectionViewCell: UICollectionViewCell {
     ///Adds a text label on the right corner of the Cell
     /// - Parameter text: String, desired text
     func addNumLabel(text: String) {
-        let numLabel = UILabel(frame: CGRect(x: self.bounds.maxX-10, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        numLabel = UILabel(frame: CGRect(x: self.bounds.maxX-10, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
         numLabel.backgroundColor = UIColor.black
         numLabel.text = text
         numLabel.textColor = UIColor.white
         numLabel.sizeToFit()
-        numLabel.layer.cornerRadius = numLabel.frame.width/2
+        //numLabel.layer.cornerRadius = numLabel.frame.width/2
         //textView.textAlignment = .center
         addSubview(numLabel)
     }
@@ -50,10 +50,19 @@ class CardCollectionViewCell: UICollectionViewCell {
         numLabel.text = text
     }
     
-    ///Adds/edits a text label in the middle of the cell
-    /// - Parameter text: String, desired text
-    func setMidLabel(text: String) {
-        let textView = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+    ///Edits the Label to display "Empty" when Card stack is empty
+    func displayEmpty() {
+        //Removes old label
+        numLabel.removeFromSuperview()
+        
+        //Adds new
+        numLabel = UILabel(frame: CGRect(x: self.bounds.midX-25, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
+        numLabel.text = "Empty"
+        numLabel.sizeToFit()
+        //numLabel.layer.cornerRadius = numLabel.frame.width/2
+        //textView.textAlignment = .center
+        addSubview(numLabel)
+
     }
     
     

@@ -48,11 +48,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     try cells.setCard(model.dealCard())
                     cells.flipBack()
                     cells.flip()
-                    cells.addNumLabel(text: "4")
+                    cells.changeNumLabel(text: "4")
                 }
                 catch {
                     if !cells.isFlipped() {
-                    cells.flipBack()
+                        cells.flipBack()
+                        cells.displayEmpty()
                     }
                 }
             }
