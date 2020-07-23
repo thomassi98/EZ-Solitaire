@@ -60,7 +60,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     //Flip effect
                     cells.flipBack()
                     cells.flip()
-                    cells.changeNumLabel(text: "0")
                 }
                 catch {
                     if !cells.isFlipped() {
@@ -73,6 +72,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                         hand.remove(at: cells.getIndex())
                         hand.insert(Card(type: "placeholder", value: "placeholder"), at: cells.getIndex())
                         model.updateHand(stack: hand)
+                        cells.changeNumLabel(text: "0")
                         
                     }
                 }
