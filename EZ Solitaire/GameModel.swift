@@ -187,6 +187,7 @@ class GameModel{
         if (matches > 0) {
             return false
         }
+        print("you lose")
         return true
     }
     

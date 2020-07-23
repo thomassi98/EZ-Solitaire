@@ -41,14 +41,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     ///Iterates cells and updates them according to game rules
     func doTurn() {
         for cells in collectionView.visibleCells as! [CardCollectionViewCell] {
-            //Checks win-conditions
-            if model.winCheck() {
-                activateVictory()
-            }
-            //Checks loss-conditions
-            if model.lossCheck() {
-                activateLoss()
-            }
+
             
             //Attempts to fetch new Card from models deck, flips cell if none found
             if cells.getCard().isMatched() {
@@ -67,13 +60,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     //Flip effect
                     cells.flipBack()
                     cells.flip()
+                    cells.changeNumLabel(text: "0")
                 }
                 catch {
                     if !cells.isFlipped() {
                         
                         //If Card stack is empty, flips to empty
                         cells.flipBack()
-                        cells.displayEmpty()
+                        //cells.displayEmpty()
                         
                         //Inserts placeholder in hand
                         hand.remove(at: cells.getIndex())
@@ -82,6 +76,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                         
                     }
                 }
+                
             }
             
             //Synchronizes chosen cells with associated chosen Card objects
@@ -96,22 +91,46 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     ///Stops game and displays victory-label
     func activateVictory() {
-        let victoryLabel = UILabel(frame: CGRect(x: view.bounds.midX, y: view.bounds.midY, width: view.bounds.maxX/2, height: view.bounds.maxY/6))
+        let victoryLabel = UILabel(frame: CGRect(x: 0, y: -30, width: view.bounds.maxX, height: view.bounds.maxY))
         
-        victoryLabel.text = "You win!"
+        disableCellTouch()
+
         victoryLabel.textColor = UIColor.green
-        victoryLabel.font.withSize(30)
+        victoryLabel.minimumScaleFactor = 0.5
+        victoryLabel.font = victoryLabel.font.withSize(view.bounds.width-(view.bounds.width/2))
+        victoryLabel.adjustsFontSizeToFitWidth = true
+        //victoryLabel.numberOfLines = 1
+        //victoryLabel.backgroundColor = UIColor.white
+        //victoryLabel.sizeToFit()
+        victoryLabel.textAlignment = .center
+        victoryLabel.text = "You win!"
         view.addSubview(victoryLabel)
+        
     }
     
     ///Stops game and displays loss-label
     func activateLoss() {
-        let lossLabel = UILabel(frame: CGRect(x: view.bounds.midX, y: view.bounds.midY, width: view.bounds.maxX/2, height: view.bounds.maxY/6))
-        
-        lossLabel.text = "You lose."
-        lossLabel.textColor = UIColor.red
-        lossLabel.font.withSize(30)
-        view.addSubview(lossLabel)
+        if !model.winCheck() {
+            let lossLabel = UILabel(frame: CGRect(x: 0, y: -30, width: view.bounds.maxX, height: view.bounds.maxY))
+            disableCellTouch()
+            lossLabel.textColor = UIColor.red
+            lossLabel.minimumScaleFactor = 0.5
+            lossLabel.font = lossLabel.font.withSize(view.bounds.width-(view.bounds.width/2))
+            lossLabel.adjustsFontSizeToFitWidth = true
+            //victoryLabel.numberOfLines = 1
+            //victoryLabel.backgroundColor = UIColor.white
+            //victoryLabel.sizeToFit()
+            lossLabel.textAlignment = .center
+            lossLabel.text = "You lose."
+            view.addSubview(lossLabel)
+        }
+    }
+    
+    ///Disables cell interaction
+    func disableCellTouch() {
+        for cells in collectionView.visibleCells as! [CardCollectionViewCell] {
+            cells.isUserInteractionEnabled = false
+        }
     }
     
     //MARK: - Protocol overrides
@@ -150,13 +169,18 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
         let card = cell.getCard()
-        
-        
+
         //Highlight cell and do turn
         if !cell.isFlipped() {
             model.chooseCard(card: card)
             doTurn()
         }
+        
+        if model.winCheck() {
+            activateVictory()
+        }
+        if model.lossCheck() {
+            activateLoss()
+        }
     }
 }
-
