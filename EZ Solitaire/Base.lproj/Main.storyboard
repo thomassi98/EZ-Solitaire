@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="D3v-an-2gP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="D3v-an-2gP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cDa-39-uYr">
@@ -77,7 +77,7 @@
                             <constraint firstItem="cDa-39-uYr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bBf-oW-r6C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cDa-39-uYr" secondAttribute="trailing" id="gMi-ia-vYu"/>
                             <constraint firstItem="D3v-an-2gP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="iDo-w2-ZYb"/>
-                            <constraint firstItem="D3v-an-2gP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="odH-cV-F8Q"/>
+                            <constraint firstItem="D3v-an-2gP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="odH-cV-F8Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
